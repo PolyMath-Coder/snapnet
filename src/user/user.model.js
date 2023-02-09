@@ -24,6 +24,7 @@ const userSchema = new Schema(
   },
   { timestamps: true }
 );
+userSchema.index({ name: 'text' });
 
 const User = mongoose.model('User', userSchema);
 

@@ -1,5 +1,6 @@
 const Citizen = require('./citizen.model');
 const ApiError = require('../helpers/error');
+const User = require('../user/user.model');
 
 const createCitizen = async (data) => {
   try {
@@ -10,4 +11,12 @@ const createCitizen = async (data) => {
   }
 };
 
-module.exports = { createCitizen };
+const searchUser = async (data) => {
+  try {
+    return await User.find({ $text: { $search: data } });
+  } catch (error) {
+    throw new ApiError(400, 'Unable to provide result for search item...');
+  }
+};
+
+module.exports = { createCitizen, searchUser };

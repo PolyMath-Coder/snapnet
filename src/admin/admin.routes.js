@@ -5,4 +5,6 @@ const router = Router();
 
 router.post('/create', userAuthentication, adminAuthorization, createCitizen);
 
+router.get('/search/user');
+
 module.exports = router;
