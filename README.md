@@ -15,3 +15,7 @@ This is the server-side technology designed to enable a Population Commision man
 - Install needful dependencies by running `npm install`
 
 ---
+
+## Useful Links.
+
+- [Postman Documentation](https://documenter.getpostman.com/view/15118089/2s935smgSJ)
