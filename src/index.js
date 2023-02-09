@@ -1,11 +1,12 @@
 const express = require('express');
 const { json, urlencoded } = express;
+const passport = require('passport');
 const { PORT } = require('./config/keys');
 const logger = require('./helpers/logger');
 const app = express();
 const { connectToDatabase } = require('./config/mongoose');
 const { errorConverter, errorHandler } = require('./helpers/asyncError');
-
+require('./auth/auth.service')(passport);
 app.use(json());
 app.use(urlencoded({ extended: true }));
 

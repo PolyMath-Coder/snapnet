@@ -13,6 +13,10 @@ const userSchema = new Schema(
       type: String,
       trim: true,
     },
+    userRole: {
+      type: String,
+      enum: ['user', 'admin'],
+    },
     password: {
       type: String,
       trim: true,
