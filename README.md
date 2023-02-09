@@ -6,8 +6,6 @@ This is the server-side technology designed to enable a Population Commision man
 
 ---
 
----
-
 # Setup
 
 - Install [Node](https://nodejs.org/en/download/) if not already installed on your PC.
