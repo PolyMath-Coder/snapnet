@@ -6,4 +6,11 @@ const createWard = catchAsync(async (req, res) => {
   res.status(201).json({ status: true, message: 'Ward now created...', ward });
 });
 
-module.exports = { createWard };
+const getWards = catchAsync(async (req, res) => {
+  const wards = await wardService.getWards;
+  res
+    .status(201)
+    .json({ status: true, message: 'All wards retrieved... ', states });
+});
+
+module.exports = { createWard, getWards };

@@ -6,4 +6,11 @@ const createLGA = catchAsync(async (req, res) => {
   res.status(200).json({ status: true, message: 'LGA now created...', data });
 });
 
-module.exports = { createLGA };
+const getLGAs = catchAsync(async (req, res) => {
+  const lgas = await lgaService.getLGAs();
+  res
+    .status(201)
+    .json({ status: true, message: "All LGA's retrieved... ", states });
+});
+
+module.exports = { createLGA, getLGAs };

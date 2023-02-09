@@ -10,4 +10,8 @@ const createLGA = async (data) => {
   }
 };
 
-module.exports = { createLGA };
+const getLGAs = async () => {
+  return await LGA.find().sort({ _id: -1 });
+};
+
+module.exports = { createLGA, getLGAs };

@@ -16,7 +16,7 @@ module.exports = (passport) => {
           if (!user) {
             return done(null, false, { message: 'User not found' });
           }
-          const validate = await user.isPasswordMatch(password);
+          const validate = await bcrypt.compare(password, user.password);
 
           if (!validate) {
             return done(null, false, {

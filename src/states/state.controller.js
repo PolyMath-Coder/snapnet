@@ -6,4 +6,11 @@ const createState = catchAsync(async (req, res) => {
   res.status(201).json({ status: true, message: 'State now created...', data });
 });
 
-module.exports = { createState };
+const getStates = catchAsync(async (req, res) => {
+  const states = await stateService.getStates();
+  res
+    .status(201)
+    .json({ status: true, message: 'All states retrieved... ', states });
+});
+
+module.exports = { createState, getStates };

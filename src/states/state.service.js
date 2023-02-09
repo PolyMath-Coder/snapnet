@@ -6,4 +6,8 @@ const createState = async (data) => {
   return await State.create(rawData);
 };
 
-module.exports = { createState };
+const getStates = async () => {
+  return await State.find().sort({ _id: -1 });
+};
+
+module.exports = { createState, getStates };

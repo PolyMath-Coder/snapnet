@@ -11,6 +11,10 @@ const createCitizen = async (data) => {
   }
 };
 
+const getAllCitizens = async () => {
+  return await Citizen.find().sort({ _id: -1 });
+};
+
 const searchUser = async (data) => {
   try {
     return await User.find({ $text: { $search: data } });
@@ -19,4 +23,4 @@ const searchUser = async (data) => {
   }
 };
 
-module.exports = { createCitizen, searchUser };
+module.exports = { createCitizen, searchUser, getAllCitizens };

@@ -10,4 +10,8 @@ const createWard = async (data) => {
   }
 };
 
-module.exports = { createWard };
+const getWards = async () => {
+  return await Ward.find().sort({ _id: -1 });
+};
+
+module.exports = { createWard, getWards };
