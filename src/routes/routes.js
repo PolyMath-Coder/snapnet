@@ -6,5 +6,6 @@ router.use('/auth', require('../user/user.routes'));
 router.use('/state', require('../states/state.routes'));
 router.use('/lga', require('../lga/lga.routes'));
 router.use('/ward', require('../ward/ward.routes'));
+router.use('/citizen', require('../admin/admin.routes'));
 
 module.exports = router;

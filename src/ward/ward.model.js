@@ -17,5 +17,5 @@ const wardSchema = new Schema(
   { timestamps: true }
 );
 
-const Ward = mongoose.model('Ward', lgaSchema);
+const Ward = mongoose.model('Ward', wardSchema);
 module.exports = Ward;
